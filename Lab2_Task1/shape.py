@@ -1,4 +1,4 @@
-class shape:
+class Shape:
     def __init__(self, x, y):
         # spara positionen internt
         self._x = x 
@@ -24,9 +24,17 @@ class shape:
 
 
     def move(self, dx, dy):
+        if not isinstance(dx, (int, float)):
+            raise TypeError("dx must be a number")
+
+        elif not isinstance(dy, (int, float)):
+            raise TypeError("dy must be a number")
+
         self._x += dx
         self._y += dy
 
+        
+
+
+
     
-circle_1 = shape(2, -1)
-circle_2 = shape(0, 0)
