@@ -44,9 +44,7 @@ class Rectangle(Shape):
         return 2 * (self.width + self.height)
 
 
-rektangel_1= Rectangle(0, 0, 2, 2)
-print(rektangel_1.area)
-print(rektangel_1.perimeter)
+
 
 
 
