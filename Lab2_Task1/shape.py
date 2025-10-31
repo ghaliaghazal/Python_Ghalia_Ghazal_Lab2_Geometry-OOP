@@ -23,7 +23,7 @@ class Shape:
         return f"shape({self._x}, {self._y})"
 
 
-    def move(self, dx, dy):
+    def translate (self, dx, dy):
         if not isinstance(dx, (int, float)):
             raise TypeError("dx must be a number")
 
