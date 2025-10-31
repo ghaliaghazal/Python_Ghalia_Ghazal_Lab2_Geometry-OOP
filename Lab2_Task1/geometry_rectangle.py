@@ -6,3 +6,24 @@ class Rectangle(Shape):
         self.width = width
         self.height = height
 
+
+    @property
+    def width(self):
+        return self._width
+
+    
+    @property
+    def height(self):
+        return self._height
+
+    
+    @property
+    def area(self):
+        return self.width * self.height
+
+
+
+    @property
+    def perimeter(self):
+        return 2 * (self.width + self.height)
+
