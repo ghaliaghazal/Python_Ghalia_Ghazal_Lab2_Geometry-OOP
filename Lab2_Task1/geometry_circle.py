@@ -30,11 +30,11 @@ class Circle(Shape):
         return 2 * pi * self.radius
 
 
-circle_1= Circle()
+circle_1= Circle(0, 0, 1)
 print(circle_1.area)
 print(circle_1.perimeter)
 
-circle_2= Circle()
+circle_2= Circle(2, -1, 1)
 print(circle_2.area)
 print(circle_2.perimeter)
 
