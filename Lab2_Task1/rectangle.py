@@ -44,8 +44,11 @@ class Rectangle(Shape):
     def perimeter(self):
         return 2 * (self._width + self._height)
 
+    def __str__(self):
+        return f"Rectangle: width={self._width}, height={self._height}, x={self._x}, y={self._y}"
+
     def __repr__(self):
-        return f"rectangle ({self._x}, {self._y} with width {self._width} and height {self._height})"
+        return f"Rectangle ({self._x}, {self._y} with width {self._width} and height {self._height})"
 
 
 
