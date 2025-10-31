@@ -24,6 +24,7 @@ class Circle(Shape):
     @property
     def area(self):
         return pi * (self.radius ** 2)
+        
 
     @property
     def perimeter(self):
@@ -32,3 +33,4 @@ class Circle(Shape):
 
 
 
+print (dir(Circle))
