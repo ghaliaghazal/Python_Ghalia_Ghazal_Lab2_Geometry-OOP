@@ -1,10 +1,11 @@
 from shape import Shape 
 
 class Rectangle(Shape):
-    def __init__ (self, x=0, y=0, width=1, height=1):
+    def __init__ (self, x=0, y=0, width=1, length=1):
         super().__init__(x, y)
         self.width = width
-        self.height = height
+        self.length = length
+
 
 
     @property
@@ -21,27 +22,27 @@ class Rectangle(Shape):
 
     
     @property
-    def height(self):
-        return self._height
+    def length(self):
+        return self._length
     
-    @height.setter
-    def height(self, value):
+    @length.setter
+    def length(self, value):
         if not isinstance(value, (int, float)):
-            raise TypeError("Height must be a number")
+            raise TypeError("length must be a number")
         elif value <= 0:
-            raise ValueError("Height must be positive")
-        self._height = value
+            raise ValueError("length must be positive")
+        self._length = value
 
     
     @property
     def area(self):
-        return self.width * self.height
+        return self.width * self.length
 
 
 
     @property
     def perimeter(self):
-        return 2 * (self.width + self.height)
+        return 2 * (self.width + self.length)
 
 
 
