@@ -7,9 +7,19 @@ class Circle(Shape):
         self.radius = radius
 
 
+
     @property
     def radius(self):
-        return self.radius
+        return self._radius # returnerar det privata radie-attributet
+
+    @radius.setter
+    def radius(self, value):
+        if not isinstance(value, (int, float)):
+            raise TypeError("Radius must be a number")
+        elif value <= 0:
+            raise ValueError("Radius must be positive")
+        self._radius = value
+
 
     @property
     def area(self):
@@ -18,3 +28,14 @@ class Circle(Shape):
     @property
     def perimeter(self):
         return 2 * pi * self.radius
+
+
+circle_1= Circle()
+print(circle_1.area)
+print(circle_1.perimeter)
+
+circle_2= Circle()
+print(circle_2.area)
+print(circle_2.perimeter)
+
+
