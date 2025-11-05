@@ -34,8 +34,10 @@ class Circle(Shape): # skapa en Circle klassen som ärver från Shape klassen
     def __str__(self): # visa cirkelns attribut som en sträng
         return f"Circle: radius={self._radius}, x={self._x}, y={self._y}"
 
-    
+    def __repr__(self): # visa hur cirkeln ser ut i koden
+        return f"Circle ({self._x}, {self._y} with radius {self._radius})"
 
+    
 
 
 
