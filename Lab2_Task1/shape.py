@@ -1,7 +1,3 @@
-import numpy as np  # importerar numpy biblioteket för matematiska operationer
-import matblotlib.pyplot as plt  # importerar matplotlib biblioteket för att rita former
-
-
 class Shape:
     def __init__(self, x=0, y=0):
         # spara positionen internt
@@ -37,10 +33,13 @@ class Shape:
         self._x += dx # uppdatera x och y med dx och dy
         self._y += dy
 
-    def plot(self, ax):
 
-circle_1 = plt.Circle((0,0), 1, color='blue') # skapar en cirkel med centrum i (0,0) och radie 1
-ax.set_xlim() # sätter x-axelns gränser
-ax.set_ylim() # sätter y-axelns gränser
+
+    def plot(self, ax):
+        pass
+
+
+
+
 
     

@@ -1,6 +1,5 @@
 from shape import Shape # importerar Shape klassen från shape.py
 from math import pi     # importerar pi konstanten från math-biblioteket
-import numpy as np  # importerar numpy biblioteket för matematiska operationer
 
 class Circle(Shape): # skapa en Circle klassen som ärver från Shape klassen
     def __init__ (self,x=0, y=0, radius=1): # 
@@ -35,9 +34,4 @@ class Circle(Shape): # skapa en Circle klassen som ärver från Shape klassen
 
 
 
-import matplotlib.pyplot as plt # importerar matplotlib biblioteket för att rita cirkeln
-
-circle_1 = plt.Circle((0,0), 1, color='blue') # skapar en cirkel med centrum i (0,0) och radie 1
-ax.set_xlim() # sätter x-axelns gränser
-ax.set_ylim() # sätter y-axelns gränser
 
