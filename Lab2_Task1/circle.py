@@ -30,6 +30,12 @@ class Circle(Shape): # skapa en Circle klassen som ärver från Shape klassen
     def perimeter(self): # beräknar omkretsen av cirkeln
         return 2 * pi * self.radius # använder radie attributet för att beräkna omkretsen
 
+    
+    def __str__(self): # visa cirkelns attribut som en sträng
+        return f"Circle: radius={self._radius}, x={self._x}, y={self._y}"
+
+    
+
 
 
 
