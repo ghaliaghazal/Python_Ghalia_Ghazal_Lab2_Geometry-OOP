@@ -41,9 +41,19 @@ class Shape:
         return (self._x == other._x) and (self._y == other._y) # jämför x och y värdena
     
     def __lt__(self, other): # kolla om en form är mindre än en annan
-        return (self._x, self._y) < (other._x, other._y) # jämför x och y värdena som tuples
+        return (self._x < self._y) and (other._x < other._y) # jämför x och y värdena som tuples
 
-    
+    def __ge__(self, other):
+        return (self._x >= other._x) and (self._y >= other._y) # kolla om en form är större än eller lika med en annan
+
+    def __gt__(self, other):
+        return (self._x > other._x) and (self._y > other._y) # kolla om en form är större än en annan
+
+    def __le__(self, other):
+        return (self._x <= other._x) and (self._y <= other._y) # kolla om en form är mindre än eller lika med en annan
+
+
+
 
     
 
