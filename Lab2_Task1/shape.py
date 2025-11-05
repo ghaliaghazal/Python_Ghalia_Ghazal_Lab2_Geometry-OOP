@@ -19,18 +19,18 @@ class Shape:
 
 
 
-    def __repr__(self):
+    def __repr__(self): # visa hur formen ser ut i koden 
         return f"shape({self._x}, {self._y})"
 
 
-    def translate (self, dx, dy):
-        if not isinstance(dx, (int, float)):
+    def translate (self, dx, dy): # kolla att dx och dy är nummer
+        if not isinstance(dx, (int, float)):  # om dx inte är ett nummer, stoppa och ge felmeddelande
             raise TypeError("dx must be a number")
 
-        elif not isinstance(dy, (int, float)):
+        elif not isinstance(dy, (int, float)): # om dy inte är ett nummer, stoppa och ge felmeddelande
             raise TypeError("dy must be a number")
 
-        self._x += dx
+        self._x += dx # uppdatera x och y med dx och dy
         self._y += dy
 
         

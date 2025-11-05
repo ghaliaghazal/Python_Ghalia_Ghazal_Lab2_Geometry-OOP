@@ -1,7 +1,7 @@
 from shape import Shape 
 
-class Rectangle(Shape):
-    def __init__ (self, x=0, y=0, width=1, height=1):
+class Rectangle(Shape): # skapa en Rectangle klassen som ärver från Shape klassen
+    def __init__ (self, x=0, y=0, width=1, height=1): # 
         super().__init__(x, y)
         self._width = width
         self._height = height
@@ -14,11 +14,11 @@ class Rectangle(Shape):
     
     @width.setter
     def width(self, value):
-        if not isinstance(value, (int, float)):
+        if not isinstance(value, (int, float)): # om value inte är ett nummer, stoppa och ge felmeddelande
             raise TypeError("Width must be a number")
-        elif value <= 0:
+        elif value <= 0:     # om value är mindre än eller lika med 0, stoppa och ge felmeddelande
             raise ValueError("Width must be positive")
-        self._width = value
+        self._width = value 
 
     
     @property
