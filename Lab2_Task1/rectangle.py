@@ -9,9 +9,9 @@ class Rectangle(Shape): # skapa en Rectangle klassen som ärver från Shape klas
 
 
     @property
-    def width(self):
-        return self._width
-    
+    def width(self): # getter för width attributet
+        return self._width # returnerar det privata width attributet
+     
     @width.setter
     def width(self, value):
         if not isinstance(value, (int, float)): # om value inte är ett nummer, stoppa och ge felmeddelande
@@ -22,7 +22,7 @@ class Rectangle(Shape): # skapa en Rectangle klassen som ärver från Shape klas
 
     
     @property
-    def height(self):
+    def height(self): # 
         return self._height
     
     @height.setter
@@ -35,19 +35,19 @@ class Rectangle(Shape): # skapa en Rectangle klassen som ärver från Shape klas
 
     
     @property
-    def area(self):
+    def area(self): # beräknar arean av rektangeln
         return self._width * self._height
 
 
 
     @property
-    def perimeter(self):
+    def perimeter(self): # beräknar omkretsen av rektangeln
         return 2 * (self._width + self._height)
 
-    def __str__(self):
-        return f"Rectangle: width={self._width}, height={self._height}, x={self._x}, y={self._y}"
+    def __str__(self): # visa rektangelns attribut som en sträng
+        return f"Rectangle: width={self._width}, height={self._height}, x={self._x}, y={self._y}" # 
 
-    def __repr__(self):
+    def __repr__(self): # visa hur rektangeln ser ut i koden
         return f"Rectangle ({self._x}, {self._y} with width {self._width} and height {self._height})"
 
 
