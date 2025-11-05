@@ -44,7 +44,8 @@ class Rectangle(Shape): # skapa en Rectangle klassen som ärver från Shape klas
     def perimeter(self): # beräknar omkretsen av rektangeln
         return 2 * (self._width + self._height)
 
-
+    def is_square(self):
+        return self._width == self._height
 
     def __str__(self): # visa rektangelns attribut som en sträng
         return f"Rectangle: width={self._width}, height={self._height}, x={self._x}, y={self._y}" # 
