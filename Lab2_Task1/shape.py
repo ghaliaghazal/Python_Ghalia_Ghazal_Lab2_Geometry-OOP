@@ -35,6 +35,22 @@ class Shape:
 
 
 
+    # comparison operators
+
+    def __eq__(self, other): # kolla om två former är lika
+        return (self._x == other._x) and (self._y == other._y) # jämför x och y värdena
+    
+    def __lt__(self, other): # kolla om en form är mindre än en annan
+        return (self._x, self._y) < (other._x, other._y) # jämför x och y värdena som tuples
+
+    
+
+    
+
+    
+
+
+
     def plot(self, ax):
         pass
 
