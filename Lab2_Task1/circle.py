@@ -7,7 +7,6 @@ class Circle(Shape): # Creat a Circle class that inherits from Shape class
         self.radius = radius # use the radius setter to set the radius attribute
 
 
-
     @property
     def radius(self):# getter for the radius attribute
         return self._radius # return the private radius attribute
@@ -58,7 +57,8 @@ class Circle(Shape): # Creat a Circle class that inherits from Shape class
         return f"Circle ({self._x}, {self._y} with radius {self._radius})"
 
 
-    
+circle_1= Circle (0, 0, 1)
+circle_2= Circle (2, -1, 1) 
 
 
 
