@@ -48,6 +48,9 @@ class Circle(Shape): # skapa en Circle klassen som ärver från Shape klassen
     def __le__(self, other):
         return self.area <= other.area
 
+    def is_unit_circle(self): # checka om cirkeln är en enhetscirkel and return True or False
+        return self.radius == 1 and self.x == 0 and self.y == 0 
+
     
     def __str__(self): # visa cirkelns attribut som en sträng
         return f"Circle: radius={self._radius}, x={self._x}, y={self._y}"
