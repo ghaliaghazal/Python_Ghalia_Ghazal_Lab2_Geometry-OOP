@@ -1,6 +1,6 @@
 from shape import Shape 
 
-class Rectangle(Shape): # skapa en Rectangle klassen som ärver från Shape klassen
+class Rectangle(Shape): # creat a Rectangle class that inherits from Shape class
     def __init__ (self, x=0, y=0, width=1, height=1): # 
         super().__init__(x, y)
         self._width = width
@@ -9,20 +9,20 @@ class Rectangle(Shape): # skapa en Rectangle klassen som ärver från Shape klas
 
 
     @property
-    def width(self): # getter för width attributet
-        return self._width # returnerar det privata width attributet
+    def width(self): # getter for the width attribute
+        return self._width # returns the private width attribute
      
     @width.setter
     def width(self, value):
-        if not isinstance(value, (int, float)): # om value inte är ett nummer, stoppa och ge felmeddelande
+        if not isinstance(value, (int, float)): # if value is not a number, stop and give error message
             raise TypeError("Width must be a number")
-        elif value <= 0:     # om value är mindre än eller lika med 0, stoppa och ge felmeddelande
+        elif value <= 0:     # if value is not positive, stop and give error message
             raise ValueError("Width must be positive")
         self._width = value 
 
     
     @property
-    def height(self): # 
+    def height(self): 
         return self._height
     
     @height.setter
@@ -35,22 +35,22 @@ class Rectangle(Shape): # skapa en Rectangle klassen som ärver från Shape klas
 
     
     @property
-    def area(self): # beräknar arean av rektangeln
+    def area(self): # calculates the area of the rectangle
         return self._width * self._height
 
 
 
     @property
-    def perimeter(self): # beräknar omkretsen av rektangeln
+    def perimeter(self): # calculates the perimeter of the rectangle
         return 2 * (self._width + self._height)
 
-    def is_square(self):
+    def is_square(self): # check if the rectangle is a square and return True or False
         return self._width == self._height
 
-    def __str__(self): # visa rektangelns attribut som en sträng
+    def __str__(self): # show the rectangle's attributes as a string
         return f"Rectangle: width={self._width}, height={self._height}, x={self._x}, y={self._y}" # 
 
-    def __repr__(self): # visa hur rektangeln ser ut i koden
+    def __repr__(self): # show how the rectangle appears in code
         return f"Rectangle ({self._x}, {self._y} with width {self._width} and height {self._height})"
 
 

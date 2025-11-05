@@ -6,11 +6,11 @@ class Shape:
 
     @property
     def x(self):
-        return self._x # läsbart x_värde
+        return self._x # readable x_ value
 
     @property
     def y(self):
-        return self._y # läsbart y_värde
+        return self._y # readable y_ value
 
     
     
@@ -19,38 +19,38 @@ class Shape:
 
 
 
-    def __repr__(self): # visa hur formen ser ut i koden 
+    def __repr__(self): # show how the shape appears in code
         return f"shape({self._x}, {self._y})"
 
 
-    def translate (self, dx, dy): # kolla att dx och dy är nummer
-        if not isinstance(dx, (int, float)):  # om dx inte är ett nummer, stoppa och ge felmeddelande
+    def translate (self, dx, dy): # check that dx and dy are numbers
+        if not isinstance(dx, (int, float)):  # if dx is not a number, stop and give error message
             raise TypeError("dx must be a number")
 
-        elif not isinstance(dy, (int, float)): # om dy inte är ett nummer, stoppa och ge felmeddelande
+        elif not isinstance(dy, (int, float)): # if dy is not a number, stop and give error message
             raise TypeError("dy must be a number")
 
-        self._x += dx # uppdatera x och y med dx och dy
+        self._x += dx # update x and y by dx och dy
         self._y += dy
 
 
 
     # comparison operators
 
-    def __eq__(self, other): # kolla om två former är lika
-        return (self._x == other._x) and (self._y == other._y) # jämför x och y värdena
+    def __eq__(self, other): # check if two shapes are equal
+        return (self._x == other._x) and (self._y == other._y) # compare x and y values 
     
-    def __lt__(self, other): # kolla om en form är mindre än en annan
-        return (self._x < self._y) and (other._x < other._y) # jämför x och y värdena som tuples
+    def __lt__(self, other): # check if one shape is less than another
+        return (self._x < self._y) and (other._x < other._y) # compare x and y values
 
     def __ge__(self, other):
-        return (self._x >= other._x) and (self._y >= other._y) # kolla om en form är större än eller lika med en annan
+        return (self._x >= other._x) and (self._y >= other._y) # check if one shape is greater than or equal to another
 
     def __gt__(self, other):
-        return (self._x > other._x) and (self._y > other._y) # kolla om en form är större än en annan
+        return (self._x > other._x) and (self._y > other._y) # check if one shape is greater than another
 
     def __le__(self, other):
-        return (self._x <= other._x) and (self._y <= other._y) # kolla om en form är mindre än eller lika med en annan
+        return (self._x <= other._x) and (self._y <= other._y) # check if one shape is less than or equal to another
 
 
 
