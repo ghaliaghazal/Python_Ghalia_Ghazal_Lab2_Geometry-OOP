@@ -30,12 +30,31 @@ class Circle(Shape): # skapa en Circle klassen som ärver från Shape klassen
     def perimeter(self): # beräknar omkretsen av cirkeln
         return 2 * pi * self.radius # använder radie attributet för att beräkna omkretsen
 
+
+    # comparison operators
+
+    def __eq__(self, other): # kolla om två former är lika
+        return self.area == other.area
+    
+    def __lt__(self, other): # kolla om en form är mindre än en annan
+        return self.area < other.area
+
+    def __ge__(self, other):
+        return self.area >= other.area
+
+    def __gt__(self, other):
+        return self.area > other.area
+
+    def __le__(self, other):
+        return self.area <= other.area
+
     
     def __str__(self): # visa cirkelns attribut som en sträng
         return f"Circle: radius={self._radius}, x={self._x}, y={self._y}"
 
     def __repr__(self): # visa hur cirkeln ser ut i koden
         return f"Circle ({self._x}, {self._y} with radius {self._radius})"
+
 
     
 
