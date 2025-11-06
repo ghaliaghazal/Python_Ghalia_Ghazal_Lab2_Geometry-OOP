@@ -1,7 +1,7 @@
 from shape import Shape 
 
 class Rectangle(Shape): # creat a Rectangle class that inherits from Shape class
-    def __init__ (self, x=0, y=0, width=1, height=1): # 
+    def __init__ (self, x=0, y=0, width=1, height=1): 
         super().__init__(x, y)
         self._width = width
         self._height = height
@@ -49,9 +49,4 @@ class Rectangle(Shape): # creat a Rectangle class that inherits from Shape class
         return f"Rectangle: width={self._width}, height={self._height}, x={self._x}, y={self._y}"  
 
     def __str__(self): # show how the rectangle appears in code
-        return f"Rectangle ({self._x}, {self._y} with width {self._width} and height {self._height})"
-
-      
-
-
-
+        return f"Rectangle at ({self._x}, {self._y} with width {self._width} and height {self._height})"

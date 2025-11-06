@@ -17,7 +17,7 @@ class Circle(Shape): # Creat a Circle class that inherits from Shape class
         return self._radius # return the private radius attribute
 
     @radius.setter 
-    def radius(self, value):
+    def radius(self, value): 
         if not isinstance(value, (int, float)):
             raise TypeError("Radius must be a number")
         elif value <= 0:
@@ -59,4 +59,4 @@ class Circle(Shape): # Creat a Circle class that inherits from Shape class
         return f"Circle: radius={self._radius}, x={self._x}, y={self._y}"
 
     def __str__(self): # show how the circle appears in code
-        return f"Circle ({self._x}, {self._y} with radius {self._radius})"
+        return f"Circle at ({self._x}, {self._y} with radius {self._radius})"
