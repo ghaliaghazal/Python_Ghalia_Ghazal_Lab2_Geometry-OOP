@@ -38,8 +38,6 @@ class Rectangle(Shape): # creat a Rectangle class that inherits from Shape class
     def area(self): # calculates the area of the rectangle
         return self._width * self._height
 
-
-
     @property
     def perimeter(self): # calculates the perimeter of the rectangle
         return 2 * (self._width + self._height)
