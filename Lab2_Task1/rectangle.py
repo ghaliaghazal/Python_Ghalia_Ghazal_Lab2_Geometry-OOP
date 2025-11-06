@@ -45,10 +45,10 @@ class Rectangle(Shape): # creat a Rectangle class that inherits from Shape class
     def is_square(self): # check if the rectangle is a square and return True or False
         return self._width == self._height
 
-    def __str__(self): # show the rectangle's attributes as a string
+    def __repr__(self): # show the rectangle's attributes as a string
         return f"Rectangle: width={self._width}, height={self._height}, x={self._x}, y={self._y}" # 
 
-    def __repr__(self): # show how the rectangle appears in code
+    def __str__(self): # show how the rectangle appears in code
         return f"Rectangle ({self._x}, {self._y} with width {self._width} and height {self._height})"
 
 
