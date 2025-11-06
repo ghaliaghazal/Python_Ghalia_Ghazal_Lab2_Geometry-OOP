@@ -51,8 +51,6 @@ class Rectangle(Shape): # creat a Rectangle class that inherits from Shape class
     def __str__(self): # show how the rectangle appears in code
         return f"Rectangle ({self._x}, {self._y} with width {self._width} and height {self._height})"
 
-
-
       
 
 

@@ -59,6 +59,7 @@ class Circle(Shape): # Creat a Circle class that inherits from Shape class
 
 circle_1= Circle (0, 0, 1)
 circle_2= Circle (2, -1, 1) 
+circle_3= Circle (5, 1, 3)
 
 
 
