@@ -38,19 +38,19 @@ class Shape:
     # comparison operators
 
     def __eq__(self, other): # check if two shapes are equal
-        return (self._x == other._x) and (self._y == other._y) # compare x and y values 
+        return (self.x == other.x) and (self.y == other.y) # compare x and y values 
     
     def __lt__(self, other): # check if one shape is less than another
-        return (self._x < self._x) and (other._y < other._y) # compare x and y values
+        return (self.x < self.x) and (other.y < other.y) # compare x and y values
 
     def __ge__(self, other):
-        return (self._x >= other._x) and (self._y >= other._y) # check if one shape is greater than or equal to another
+        return (self.x >= other.x) and (self.y >= other.y) # check if one shape is greater than or equal to another
 
     def __gt__(self, other):
-        return (self._x > other._x) and (self._y > other._y) # check if one shape is greater than another
+        return (self.x > other.x) and (self.y > other.y) # check if one shape is greater than another
 
     def __le__(self, other):
-        return (self._x <= other._x) and (self._y <= other._y) # check if one shape is less than or equal to another
+        return (self.x <= other.x) and (self.y <= other.y) # check if one shape is less than or equal to another
 
 
 

@@ -2,8 +2,13 @@ from shape import Shape # Import the Shape class from shape.py
 from math import pi     # Import the pi constant from the math library 
 
 class Circle(Shape): # Creat a Circle class that inherits from Shape class
-    def __init__ (self,x=0, y=0, radius=1): # 
+    def __init__ (self,x=0, y=0, radius=1): 
         super().__init__(x, y)
+        if not isinstance(radius, (int, float)):
+            raise TypeError("Radius must be a number")
+        elif radius <= 0:
+            raise ValueError("Radius must be positive")
+        self._radius = radius
         self.radius = radius # use the radius setter to set the radius attribute
 
 
@@ -55,14 +60,3 @@ class Circle(Shape): # Creat a Circle class that inherits from Shape class
 
     def __str__(self): # show how the circle appears in code
         return f"Circle ({self._x}, {self._y} with radius {self._radius})"
-
-
-circle_1= Circle (0, 0, 1)
-circle_2= Circle (2, -1, 1) 
-circle_3= Circle (5, 1, 3)
-
-
-
-
-
-
