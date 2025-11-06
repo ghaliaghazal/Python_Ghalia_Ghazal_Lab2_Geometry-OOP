@@ -4,7 +4,7 @@ from math import pi     # Import the pi constant from the math library
 class Circle(Shape): # Creat a Circle class that inherits from Shape class
     def __init__ (self,x=0, y=0, radius=1): 
         super().__init__(x, y)
-        if not isinstance(radius, (int, float)):
+        if not isinstance(radius, (int, float)) or isinstance(radius, bool):
             raise TypeError("Radius must be a number")
         elif radius <= 0:
             raise ValueError("Radius must be positive")
