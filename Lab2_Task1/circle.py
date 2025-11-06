@@ -4,7 +4,7 @@ from math import pi     # Import the pi constant from the math library
 class Circle(Shape): # Creat a Circle class that inherits from Shape class
     def __init__ (self,x=0, y=0, radius=1): # 
         super().__init__(x, y)
-        self.radius = radius # use the radius setter to set the radius attribute
+        self._radius = radius # use the radius setter to set the radius attribute
 
 
     @property
