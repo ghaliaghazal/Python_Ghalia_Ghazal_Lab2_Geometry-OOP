@@ -41,7 +41,7 @@ class Shape:
         return (self._x == other._x) and (self._y == other._y) # compare x and y values 
     
     def __lt__(self, other): # check if one shape is less than another
-        return (self._x < self._y) and (other._x < other._y) # compare x and y values
+        return (self._x < self._x) and (other._y < other._y) # compare x and y values
 
     def __ge__(self, other):
         return (self._x >= other._x) and (self._y >= other._y) # check if one shape is greater than or equal to another
@@ -53,16 +53,6 @@ class Shape:
         return (self._x <= other._x) and (self._y <= other._y) # check if one shape is less than or equal to another
 
 
-
-
-    
-
-    
-
-
-
-    def plot(self, ax):
-        pass
 
 
 
